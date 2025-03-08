@@ -3,10 +3,7 @@
 #include <unistd.h>
 
 int main() {
-    // Command to add a rule to allow incoming SSH connections
     char *command = "sudo iptables -D INPUT -p tcp --dport 80 -j ACCEPT";
-
-    // Execute the command
     int status = system(command);
 
     if (status == -1) {
